@@ -5,12 +5,23 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=file:/app/prisma/dev.db
+      - DATABASE_URL=postgresql://postgres:password@db:5432/contactmanager
+    depends_on:
+      - db
     volumes:
-      - ./prisma:/app/prisma
       - ./src:/app/src
-    command: sh -c "npx prisma generate && npx prisma db push && npm run dev"
-    stdin_open: true
-    tty: true
+      - ./prisma:/app/prisma
 
-  # SQLite no necesita contenedor separado, se usa el archivo local
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=contactmanager
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

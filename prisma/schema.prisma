@@ -3,10 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
+// Los modelos User y Contact se mantienen igual
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
