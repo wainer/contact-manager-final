@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:/app/prisma/dev.db
+    volumes:
+      - ./prisma:/app/prisma
+      - ./src:/app/src
+    command: sh -c "npx prisma generate && npx prisma db push && npm run dev"
+    stdin_open: true
+    tty: true
+
+  # SQLite no necesita contenedor separado, se usa el archivo local
