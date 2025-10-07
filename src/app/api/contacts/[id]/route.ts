@@ -26,11 +26,48 @@ export async function PUT(
       return NextResponse.json({ error: 'Contacto no encontrado' }, { status: 404 })
     }
 
+    // Validar email único (excluyendo el contacto actual)
+    if (email !== existingContact.email) {
+      const existingEmail = await prisma.contact.findFirst({
+        where: { 
+          email,
+          userId: user.userId,
+          NOT: { id: params.id }
+        }
+      })
+
+      if (existingEmail) {
+        return NextResponse.json(
+          { error: 'Ya existe un contacto con este email' },
+          { status: 400 }
+        )
+      }
+    }
+
+    // Validar teléfono único (excluyendo el contacto actual)
+    if (phone !== existingContact.phone) {
+      const existingPhone = await prisma.contact.findFirst({
+        where: { 
+          phone,
+          userId: user.userId,
+          NOT: { id: params.id }
+        }
+      })
+
+      if (existingPhone) {
+        return NextResponse.json(
+          { error: 'Ya existe un contacto con este teléfono' },
+          { status: 400 }
+        )
+      }
+    }
+
     const contact = await prisma.contact.update({
       where: { id: params.id },
       data: { name, email, phone, address: address || '' }
     })
 
+    console.log('✅ Contacto actualizado exitosamente:', contact.id)
     return NextResponse.json(contact)
   } catch (error) {
     console.error('Update contact error:', error)
@@ -65,6 +102,7 @@ export async function DELETE(
       where: { id: params.id }
     })
 
+    console.log('✅ Contacto eliminado exitosamente:', params.id)
     return NextResponse.json({ message: 'Contacto eliminado' })
   } catch (error) {
     console.error('Delete contact error:', error)

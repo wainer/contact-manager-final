@@ -43,10 +43,40 @@ export async function POST(request: NextRequest) {
 
     const { name, email, phone, address } = await request.json()
 
-    // Validaciones
+    // Validaciones básicas
     if (!name || !email || !phone) {
       return NextResponse.json(
         { error: 'Nombre, email y teléfono son requeridos' },
+        { status: 400 }
+      )
+    }
+
+    // Validar que el email no exista para este usuario
+    const existingEmail = await prisma.contact.findFirst({
+      where: { 
+        email,
+        userId: user.userId
+      }
+    })
+
+    if (existingEmail) {
+      return NextResponse.json(
+        { error: 'Ya existe un contacto con este email' },
+        { status: 400 }
+      )
+    }
+
+    // Validar que el teléfono no exista para este usuario
+    const existingPhone = await prisma.contact.findFirst({
+      where: { 
+        phone,
+        userId: user.userId
+      }
+    })
+
+    if (existingPhone) {
+      return NextResponse.json(
+        { error: 'Ya existe un contacto con este teléfono' },
         { status: 400 }
       )
     }
@@ -61,6 +91,7 @@ export async function POST(request: NextRequest) {
       }
     })
 
+    console.log('✅ Contacto creado exitosamente:', contact.id)
     return NextResponse.json(contact, { status: 201 })
   } catch (error) {
     console.error('Create contact error:', error)
