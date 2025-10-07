@@ -115,6 +115,14 @@ La app estará en 👉 **http://localhost:3000**
 
 ---
 
+## 🔹 3. Clonar el repositorio
+
+Clona el repositorio en tu máquina local usando HTTPS:
+
+```bash
+git clone https://github.com/wainer/contact-manager-final.git
+cd contact-manager-final
+
 ## 🔐 Credenciales de Prueba
 
 | Email | Contraseña |
@@ -313,7 +321,7 @@ docker-compose down
 
 ---
 
-## ❤️ Desarrollado por
+## ❤️ Desarrollado por Wainer De Paula
 
 Desarrollado con 💙 usando  
 **Next.js, TypeScript, Prisma, PostgreSQL y Docker**
