@@ -34,6 +34,21 @@ Una aplicación web **completa y profesional** para gestionar contactos, constru
 
 ---
 
+## 🎥 Video Demostrativo
+
+### 📹 Funcionamiento Completo del Sistema
+[![Video Demostrativo de la Aplicación](https://img.shields.io/badge/🎥_Ver_Video_Demostrativo-MEGA.nz-blue?style=for-the-badge)](https://mega.nz/file/oJMEGZob#q2b1waUKI28OgHC0ksMuI2-h_ntTh48NInGBeS84lzA)
+
+**Descripción del video:** Muestra el flujo completo de la aplicación incluyendo:
+- ✅ Inicio de sesión y autenticación
+- ✅ Gestión completa de contactos (crear, editar, eliminar)
+- ✅ Sistema de búsqueda y filtros
+- ✅ Validaciones y notificaciones toast
+- ✅ Manejo de errores y confirmaciones
+- ✅ Cierre de sesión seguro
+
+---
+
 ## 🖼️ Capturas de Pantalla
 
 Visualiza la interfaz moderna y funcional del sistema:
