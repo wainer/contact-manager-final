@@ -53,14 +53,17 @@ Visualiza la interfaz moderna y funcional del sistema:
 ### 🔔 Notificaciones Toast
 ![Notificaciones Toast](assets/screenshots/notificaciones-toasts.png)
 
+### 🔍 Búsqueda, Filtros y Ordenación por campo
+![Búsqueda, Filtros y Ordenacion](assets/screenshots/busqueda-filtros-ordenacion.png)
+
 ### 🗑️ Confirmación Eliminar Contacto
 ![Confirmación Eliminar Contacto](assets/screenshots/confirmacion-eliminar-contacto.png)
 
-### 🔐 Confirmación Cerrar Sesión
-![Confirmación Cerrar Sesión](assets/screenshots/confirmacion-cerrar-sesion.png)
-
 ### ✅ Eliminación Exitosa
 ![Eliminación Exitosa](assets/screenshots/eliminacion-exitosa.png)
+
+### 🔐 Confirmación Cerrar Sesión
+![Confirmación Cerrar Sesión](assets/screenshots/confirmacion-cerrar-sesion.png)
 
 ---
 
