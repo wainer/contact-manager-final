@@ -213,8 +213,15 @@ npm start
 ### Variables de entorno
 
 ```env
-DATABASE_URL="postgresql://usuario:password@host:5432/basedatos"
-JWT_SECRET="clave_super_secreta"
+# --- Base de datos ---
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+
+# --- JWT ---
+JWT_SECRET=
+
 ```
 
 ---
@@ -283,29 +290,37 @@ model Contact {
 ## 🧩 Docker Compose
 
 ```yaml
+version: '3.8'
+
 services:
   app:
     build: .
+    container_name: contactmanager_app
     ports:
       - "3000:3000"
-    environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/contactmanager
+    env_file:
+      - .env
     depends_on:
       - db
+    volumes:
+      - ./src:/app/src
+      - ./prisma:/app/prisma
+    restart: unless-stopped
 
   db:
     image: postgres:15
-    environment:
-      - POSTGRES_DB=contactmanager
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+    container_name: contactmanager_db
+    env_file:
+      - .env
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
 
 volumes:
   postgres_data:
+
 ```
 
 ---
