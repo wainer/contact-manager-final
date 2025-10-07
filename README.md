@@ -25,6 +25,27 @@ Una aplicación web **completa y profesional** para gestionar contactos, constru
 
 ---
 
+## 🖼️ Capturas de Pantalla
+
+Visualiza la interfaz moderna y funcional del sistema:
+
+### 🔐 Login
+![Pantalla de Login](assets/screenshots/login.png)
+
+### 🏠 Dashboard
+![Dashboard](assets/screenshots/dashboard.png)
+
+### ➕ Nuevo Contacto
+![Nuevo Contacto](assets/screenshots/nuevo-contacto.png)
+
+### ✏️ Actualizar Contacto
+![Actualizar Contacto](assets/screenshots/actualizar-contacto.png)
+
+### 🔔 Notificaciones Toast
+![Notificaciones Toast](assets/screenshots/notificaciones-toasts.png)
+
+---
+
 ## 🧱 Componentes Reutilizables
 
 | # | Componente | Descripción |
