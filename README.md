@@ -50,8 +50,11 @@ Visualiza la interfaz moderna y funcional del sistema:
 ### ✏️ Actualizar Contacto
 ![Actualizar Contacto](assets/screenshots/actualizar-contacto.png)
 
-### 🔔 Notificaciones Toast
+### 🔔 Notificaciones Toast de eventos y validaciones de duplicidad correo y telefono
 ![Notificaciones Toast](assets/screenshots/notificaciones-toasts.png)
+
+### ❌ Manejo de Errores Generales del Sistema, Validación, Conexión
+![Manejo de Errores](assets/screenshots/manejo-errores-generales.png)
 
 ### 🔍 Búsqueda, Filtros y Ordenación por campo
 ![Búsqueda, Filtros y Ordenacion](assets/screenshots/busqueda-filtros-ordenacion.png)
