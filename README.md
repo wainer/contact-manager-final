@@ -21,7 +21,16 @@ Una aplicación web **completa y profesional** para gestionar contactos, constru
 - ↕️ **Ordenamiento múltiple** (nombre, email, teléfono, fecha)  
 - 💬 **Toasts profesionales** para todas las operaciones  
 - 🪟 **Modales** para crear y editar contactos  
-- 📈 **Estadísticas en tiempo real**  
+- 📈 **Estadísticas en tiempo real**
+- 🎨 **Diseño moderno** con gradientes y bordes redondeados
+- 🔘 **Iconos representativos** en todos los botones y componentes
+- ⚡ **Confirmaciones interactivas** con SweetAlert2
+- 🎯 **Experiencia de usuario mejorada** con transiciones suaves
+- 📱 **Diseño completamente responsive** y adaptable
+- ✨ **Efectos visuales** en hover y estados activos
+- 🗑️ **Confirmación de eliminación** con modal personalizado
+- 🔐 **Confirmación de cierre de sesión** con SweetAlert
+- 📋 **Avatar circular** con inicial del contacto en la tabla
 
 ---
 
@@ -43,6 +52,15 @@ Visualiza la interfaz moderna y funcional del sistema:
 
 ### 🔔 Notificaciones Toast
 ![Notificaciones Toast](assets/screenshots/notificaciones-toasts.png)
+
+### 🗑️ Confirmación Eliminar Contacto
+![Confirmación Eliminar Contacto](assets/screenshots/confirmacion-eliminar-contacto.png)
+
+### 🔐 Confirmación Cerrar Sesión
+![Confirmación Cerrar Sesión](assets/screenshots/confirmacion-cerrar-sesion.png)
+
+### ✅ Eliminación Exitosa
+![Eliminación Exitosa](assets/screenshots/eliminacion-exitosa.png)
 
 ---
 
